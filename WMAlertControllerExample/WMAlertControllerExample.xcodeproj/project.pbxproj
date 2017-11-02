@@ -1,0 +1,364 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7584A2D51FA7CFE100A83812 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7584A2D41FA7CFE100A83812 /* AppDelegate.swift */; };
+		7584A2D71FA7CFE100A83812 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7584A2D61FA7CFE100A83812 /* ViewController.swift */; };
+		7584A2DA1FA7CFE100A83812 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7584A2D81FA7CFE100A83812 /* Main.storyboard */; };
+		7584A2DD1FA7CFE100A83812 /* WMAlertControllerExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7584A2DB1FA7CFE100A83812 /* WMAlertControllerExample.xcdatamodeld */; };
+		7584A2DF1FA7CFE100A83812 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7584A2DE1FA7CFE100A83812 /* Assets.xcassets */; };
+		7584A2E21FA7CFE100A83812 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7584A2E01FA7CFE100A83812 /* LaunchScreen.storyboard */; };
+		7584A2F81FA8C2E900A83812 /* WMAlertController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7584A2F71FA8C2E900A83812 /* WMAlertController.framework */; };
+		7584A2F91FA8C2E900A83812 /* WMAlertController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7584A2F71FA8C2E900A83812 /* WMAlertController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7584A2FA1FA8C2E900A83812 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7584A2F91FA8C2E900A83812 /* WMAlertController.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7584A2D11FA7CFE100A83812 /* WMAlertControllerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WMAlertControllerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7584A2D41FA7CFE100A83812 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7584A2D61FA7CFE100A83812 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7584A2D91FA7CFE100A83812 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7584A2DC1FA7CFE100A83812 /* WMAlertControllerExample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WMAlertControllerExample.xcdatamodel; sourceTree = "<group>"; };
+		7584A2DE1FA7CFE100A83812 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7584A2E11FA7CFE100A83812 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7584A2E31FA7CFE100A83812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7584A2F71FA8C2E900A83812 /* WMAlertController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WMAlertController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7584A2CE1FA7CFE100A83812 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7584A2F81FA8C2E900A83812 /* WMAlertController.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7584A2C81FA7CFE100A83812 = {
+			isa = PBXGroup;
+			children = (
+				7584A2F71FA8C2E900A83812 /* WMAlertController.framework */,
+				7584A2D31FA7CFE100A83812 /* Example */,
+				7584A2D21FA7CFE100A83812 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7584A2D21FA7CFE100A83812 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7584A2D11FA7CFE100A83812 /* WMAlertControllerExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7584A2D31FA7CFE100A83812 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				7584A2D41FA7CFE100A83812 /* AppDelegate.swift */,
+				7584A2D61FA7CFE100A83812 /* ViewController.swift */,
+				7584A2D81FA7CFE100A83812 /* Main.storyboard */,
+				7584A2DE1FA7CFE100A83812 /* Assets.xcassets */,
+				7584A2E01FA7CFE100A83812 /* LaunchScreen.storyboard */,
+				7584A2E31FA7CFE100A83812 /* Info.plist */,
+				7584A2DB1FA7CFE100A83812 /* WMAlertControllerExample.xcdatamodeld */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7584A2D01FA7CFE100A83812 /* WMAlertControllerExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7584A2F11FA7CFE100A83812 /* Build configuration list for PBXNativeTarget "WMAlertControllerExample" */;
+			buildPhases = (
+				7584A2CD1FA7CFE100A83812 /* Sources */,
+				7584A2CE1FA7CFE100A83812 /* Frameworks */,
+				7584A2CF1FA7CFE100A83812 /* Resources */,
+				7584A2FA1FA8C2E900A83812 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WMAlertControllerExample;
+			productName = WMAlertControllerExample;
+			productReference = 7584A2D11FA7CFE100A83812 /* WMAlertControllerExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7584A2C91FA7CFE100A83812 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = WorkMarket;
+				TargetAttributes = {
+					7584A2D01FA7CFE100A83812 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7584A2CC1FA7CFE100A83812 /* Build configuration list for PBXProject "WMAlertControllerExample" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7584A2C81FA7CFE100A83812;
+			productRefGroup = 7584A2D21FA7CFE100A83812 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7584A2D01FA7CFE100A83812 /* WMAlertControllerExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7584A2CF1FA7CFE100A83812 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7584A2E21FA7CFE100A83812 /* LaunchScreen.storyboard in Resources */,
+				7584A2DF1FA7CFE100A83812 /* Assets.xcassets in Resources */,
+				7584A2DA1FA7CFE100A83812 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7584A2CD1FA7CFE100A83812 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7584A2D71FA7CFE100A83812 /* ViewController.swift in Sources */,
+				7584A2D51FA7CFE100A83812 /* AppDelegate.swift in Sources */,
+				7584A2DD1FA7CFE100A83812 /* WMAlertControllerExample.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7584A2D81FA7CFE100A83812 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7584A2D91FA7CFE100A83812 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7584A2E01FA7CFE100A83812 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7584A2E11FA7CFE100A83812 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7584A2EF1FA7CFE100A83812 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7584A2F01FA7CFE100A83812 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7584A2F21FA7CFE100A83812 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D6DLDFH765;
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.workmarket.WMAlertControllerExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7584A2F31FA7CFE100A83812 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D6DLDFH765;
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.workmarket.WMAlertControllerExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7584A2CC1FA7CFE100A83812 /* Build configuration list for PBXProject "WMAlertControllerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7584A2EF1FA7CFE100A83812 /* Debug */,
+				7584A2F01FA7CFE100A83812 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7584A2F11FA7CFE100A83812 /* Build configuration list for PBXNativeTarget "WMAlertControllerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7584A2F21FA7CFE100A83812 /* Debug */,
+				7584A2F31FA7CFE100A83812 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7584A2DB1FA7CFE100A83812 /* WMAlertControllerExample.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7584A2DC1FA7CFE100A83812 /* WMAlertControllerExample.xcdatamodel */,
+			);
+			currentVersion = 7584A2DC1FA7CFE100A83812 /* WMAlertControllerExample.xcdatamodel */;
+			path = WMAlertControllerExample.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7584A2C91FA7CFE100A83812 /* Project object */;
+}
