@@ -49,6 +49,16 @@ class StackedViewTest: XCTestCase {
         removeSubview()
     }
     
+    func testInsertSubviewVertical() {
+        stackedView.direction = .vertical
+        insertSubview()
+    }
+    
+    func testInsertSubviewHorizontal() {
+        stackedView.direction = .horizontal
+        insertSubview()
+    }
+    
     func addSubview() {
         let label1 = UILabel()
         label1.text = "First Label"
@@ -65,6 +75,29 @@ class StackedViewTest: XCTestCase {
         XCTAssert(stackedView.subviews.first === label1)
         XCTAssert(stackedView.subviews.last === label2)
         XCTAssert(stackedView.subviews.count == 2)
+    }
+    
+    func insertSubview() {
+        let label1 = UILabel()
+        label1.text = "First Label"
+        stackedView.addSubview(label1)
+        
+        XCTAssert(stackedView.subviews.first === label1)
+        XCTAssert(stackedView.subviews.last === label1)
+        XCTAssert(stackedView.subviews.count == 1)
+        
+        let label2 = UILabel()
+        label2.text = "First Label"
+        stackedView.addSubview(label2)
+        
+        let label3 = UILabel()
+        label3.text = "Middle Label"
+        stackedView.insertSubview(label3, at: 1)
+        
+        XCTAssert(stackedView.subviews.first === label1)
+        XCTAssert(stackedView.subviews[1] === label3)
+        XCTAssert(stackedView.subviews.last === label2)
+        XCTAssert(stackedView.subviews.count == 3)
     }
     
     func removeSubview() {
