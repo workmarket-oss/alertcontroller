@@ -60,6 +60,13 @@ public class StackedView: UIView {
     override public func addSubview(_ view: UIView) {
         view.translatesAutoresizingMaskIntoConstraints = false
         let lastView = self.subviews.last
+        
+        if direction == .vertical {
+            view.frame = CGRect(x: 0, y: lastView?.frame.maxY ?? 0, width: 0, height: 0)
+        } else {
+            view.frame = CGRect(x: lastView?.frame.maxX ?? 0, y: 0, width: 0, height: 0)
+        }
+        
         super.addSubview(view)
         
         let insets = delegate?.stackedView(self, spacingForView: view) ?? UIEdgeInsets.zero
@@ -97,6 +104,7 @@ public class StackedView: UIView {
             views: ["previousView": previousView,
                     "addedView": view]
         )
+        constraints.first?.identifier = "Between stacked subviews"
         self.addConstraints(constraints)
         
         let hConstraints = NSLayoutConstraint.constraints(
@@ -115,15 +123,24 @@ public class StackedView: UIView {
     }
     
     public override func insertSubview(_ view: UIView, at index: Int) {
-        if index == subviews.count {
+        if index >= subviews.count || subviews.count == 0 {
             addSubview(view)
         }
         view.translatesAutoresizingMaskIntoConstraints = false
+        
+        let previous = index > 0 ? subviews[index - 1] : nil
+        
+        if direction == .vertical {
+            view.frame = CGRect(x: 0, y: previous?.frame.maxY ?? 0, width: 0, height: 0)
+        } else {
+            view.frame = CGRect(x: previous?.frame.maxX ?? 0, y: 0, width: 0, height: 0)
+        }
+        
         super.insertSubview(view, at: index)
         
         let insets = delegate?.stackedView(self, spacingForView: view) ?? UIEdgeInsets.zero
         
-        guard index > 0 else {
+        guard let previousView = previous else {
             let vConstraints = NSLayoutConstraint.constraints(
                 withVisualFormat: "\(vAxis):|-top-[addedView]",
                 options: NSLayoutFormatOptions(rawValue: 0),
@@ -147,7 +164,6 @@ public class StackedView: UIView {
             return
         }
         
-        let previousView = subviews[index - 1]
         let previousInsets = delegate?.stackedView(self, spacingForView: previousView) ?? UIEdgeInsets.zero
         
         let constraints = NSLayoutConstraint.constraints(
@@ -157,6 +173,7 @@ public class StackedView: UIView {
             views: ["previousView": previousView,
                     "addedView": view]
         )
+        constraints.first?.identifier = "Between stacked subviews"
         self.addConstraints(constraints)
         
         let hConstraints = NSLayoutConstraint.constraints(
@@ -223,6 +240,7 @@ public class StackedView: UIView {
                 multiplier: 1.0,
                 constant: constant
             )
+            constraint.identifier = "Between stacked subviews"
         } else {
             constraint = NSLayoutConstraint(
                 item: self,
@@ -233,6 +251,7 @@ public class StackedView: UIView {
                 multiplier: 1.0,
                 constant: constant
             )
+            constraint.identifier = "Bottom constraint of stack"
             self.bottomConstraint = constraint
         }
         
@@ -254,6 +273,7 @@ public class StackedView: UIView {
             multiplier: 1.0,
             constant: constant
         )
+        constraint.identifier = "Bottom constraint of stack"
         self.bottomConstraint = constraint
         self.addConstraint(constraint)
     }
