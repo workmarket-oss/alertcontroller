@@ -5,6 +5,15 @@
 [![License](https://img.shields.io/cocoapods/l/WMAlertController.svg?style=flat)](http://cocoapods.org/pods/WMAlertController)
 [![Platform](https://img.shields.io/cocoapods/p/WMAlertController.svg?style=flat)](http://cocoapods.org/pods/WMAlertController)
 
+![Screenshots](https://github.com/workmarket-oss/alertcontroller/blob/master/Screenshots/dark_style.png)
+![Screenshots](https://github.com/workmarket-oss/alertcontroller/blob/master/Screenshots/light_style.png)
+![Screenshots](https://github.com/workmarket-oss/alertcontroller/blob/master/Screenshots/two_buttons.png)
+![Screenshots](https://github.com/workmarket-oss/alertcontroller/blob/master/Screenshots/three_buttons.png)
+
+## Requirement
+* iOS 9.0+
+* Swift 3.0+
+
 ## Installation
 
 WMAlertController is available through [CocoaPods](http://cocoapods.org). To install
@@ -32,6 +41,26 @@ Using the provided WMAlertStyle, you can modify the following attributes:
 - separatorColor
 - titleAttributes
 - messageAttributes
+
+## Usage
+
+```swift
+let alertController = WMAlertController(
+    title: "Confirmation",
+    message: "Example Alert Controller",
+    style: .light,
+    decoration: .none
+)
+alertController.addAction(WMAlertAction(title: "Cancel", handler: { (action) in
+    action.alert?.dismiss(animated: true, completion: nil)
+}))
+alertController.addAction(WMAlertAction(title: "Do the action", handler: { (action) in
+    action.alert?.dismiss(animated: true, completion: {
+        // Do some work...
+    })
+}))
+self.present(alertController, animated: true, completion: nil)
+```
 
 ## License
 
