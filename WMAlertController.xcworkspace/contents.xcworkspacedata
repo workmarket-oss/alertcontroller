@@ -7,4 +7,13 @@
    <FileRef
       location = "group:WMAlertController.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
+   <FileRef
+      location = "group:LICENSE">
+   </FileRef>
+   <FileRef
+      location = "group:WMAlertController.podspec">
+   </FileRef>
 </Workspace>
