@@ -46,18 +46,18 @@ extension UIFont {
     }
 
     class func mediumSystemFontOfSize(_ size: CGFloat) -> UIFont {
-        return UIFont.systemFont(ofSize: size, weight: UIFontWeightMedium)
+        return UIFont.systemFont(ofSize: size, weight: UIFont.Weight.medium)
     }
 
     class func semiboldSystemFontOfSize(_ size: CGFloat) -> UIFont {
-        return UIFont.systemFont(ofSize: size, weight: UIFontWeightSemibold)
+        return UIFont.systemFont(ofSize: size, weight: UIFont.Weight.semibold)
     }
 
     class func thinSystemFontOfSize(_ size: CGFloat) -> UIFont {
-        return UIFont.systemFont(ofSize: size, weight: UIFontWeightThin)
+        return UIFont.systemFont(ofSize: size, weight: UIFont.Weight.thin)
     }
 
     class func lightSystemFontOfSize(_ size: CGFloat) -> UIFont {
-        return UIFont.systemFont(ofSize: size, weight: UIFontWeightLight)
+        return UIFont.systemFont(ofSize: size, weight: UIFont.Weight.light)
     }
 }
