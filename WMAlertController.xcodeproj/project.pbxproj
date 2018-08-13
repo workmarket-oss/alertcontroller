@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		666715F72121FC2B0019731D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 666715F62121FC2A0019731D /* README.md */; };
+		666715F92121FC470019731D /* WMAlertController.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 666715F82121FC470019731D /* WMAlertController.podspec */; };
 		7584A29B1FA7C03500A83812 /* WMAlertController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7584A2911FA7C03400A83812 /* WMAlertController.framework */; };
 		7584A2A01FA7C03500A83812 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7584A29F1FA7C03500A83812 /* Tests.swift */; };
 		7584A2B01FA7C16E00A83812 /* WMAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7584A2AB1FA7C16E00A83812 /* WMAlertController.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		666715F62121FC2A0019731D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		666715F82121FC470019731D /* WMAlertController.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WMAlertController.podspec; sourceTree = SOURCE_ROOT; };
 		7584A2911FA7C03400A83812 /* WMAlertController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WMAlertController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7584A2951FA7C03400A83812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7584A29A1FA7C03500A83812 /* WMAlertControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WMAlertControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +115,8 @@
 				7584A2C31FA7C41500A83812 /* Colors.swift */,
 				7584A2C51FA7C48E00A83812 /* Fonts.swift */,
 				7584A2951FA7C03400A83812 /* Info.plist */,
+				666715F62121FC2A0019731D /* README.md */,
+				666715F82121FC470019731D /* WMAlertController.podspec */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -181,12 +187,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = WorkMarket;
 				TargetAttributes = {
 					7584A2901FA7C03400A83812 = {
 						CreatedOnToolsVersion = 9.0.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 0940;
 						ProvisioningStyle = Automatic;
 					};
 					7584A2991FA7C03500A83812 = {
@@ -218,6 +224,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				666715F72121FC2B0019731D /* README.md in Resources */,
+				666715F92121FC470019731D /* WMAlertController.podspec in Resources */,
 				7584A2BC1FA7C2A100A83812 /* LoadingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +293,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -292,6 +301,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -345,6 +355,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -352,6 +363,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -402,7 +414,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -424,7 +437,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.workmarket.WMAlertController;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
