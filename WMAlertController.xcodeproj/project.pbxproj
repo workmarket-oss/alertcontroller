@@ -82,6 +82,7 @@
 				7584A2931FA7C03400A83812 /* Source */,
 				7584A29E1FA7C03500A83812 /* Tests */,
 				7584A2921FA7C03400A83812 /* Products */,
+				7584A2951FA7C03400A83812 /* Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,7 +111,6 @@
 				7584A2C11FA7C3E200A83812 /* RoundButton.swift */,
 				7584A2C31FA7C41500A83812 /* Colors.swift */,
 				7584A2C51FA7C48E00A83812 /* Fonts.swift */,
-				7584A2951FA7C03400A83812 /* Info.plist */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -399,7 +399,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.workmarket.WMAlertController;
@@ -423,7 +423,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.workmarket.WMAlertController;
