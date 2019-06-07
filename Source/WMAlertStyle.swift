@@ -28,8 +28,8 @@ public struct WMAlertStyle {
     var messageNumberOfLines: Int = 0
     var separatorColor: UIColor = UIColor.coolGreyTwo()
     
-    var titleAttributes: [NSAttributedStringKey: Any]?
-    var messageAttributes: [NSAttributedStringKey: Any]?
+    var titleAttributes: [NSAttributedString.Key: Any]?
+    var messageAttributes: [NSAttributedString.Key: Any]?
 }
 
 extension WMAlertStyle: Equatable {}
@@ -54,18 +54,18 @@ public extension WMAlertStyle {
         get {
             var style = WMAlertStyle()
             style.titleAttributes = [
-                NSAttributedStringKey.kern: NSNumber(value: 0.6),
-                NSAttributedStringKey.font: UIFont.semiboldSystemFontOfSize(20),
-                NSAttributedStringKey.foregroundColor: UIColor.greyishBrown()
+                NSAttributedString.Key.kern: NSNumber(value: 0.6),
+                NSAttributedString.Key.font: UIFont.semiboldSystemFontOfSize(20),
+                NSAttributedString.Key.foregroundColor: UIColor.greyishBrown()
             ]
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.lineSpacing = 5
             paragraphStyle.alignment = .center
             style.messageAttributes = [
-                NSAttributedStringKey.kern: NSNumber(value: 0.4),
-                NSAttributedStringKey.font: UIFont.systemFont(ofSize: 16),
-                NSAttributedStringKey.paragraphStyle: paragraphStyle,
-                NSAttributedStringKey.foregroundColor: UIColor.greyishBrown()
+                NSAttributedString.Key.kern: NSNumber(value: 0.4),
+                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16),
+                NSAttributedString.Key.paragraphStyle: paragraphStyle,
+                NSAttributedString.Key.foregroundColor: UIColor.greyishBrown()
             ]
             return style
         }

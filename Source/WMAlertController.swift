@@ -38,11 +38,11 @@ open class WMAlertController: UIViewController, StackedViewDelegate {
     public var loading: Bool = false {
         didSet {
             if loading {
-                alertView.bringSubview(toFront: loadingView)
+                alertView.bringSubviewToFront(loadingView)
                 loadingView.isHidden = false
                 loadingView.activityIndicator.startAnimating()
             } else {
-                alertView.sendSubview(toBack: loadingView)
+                alertView.sendSubviewToBack(loadingView)
                 loadingView.isHidden = true
                 loadingView.activityIndicator.stopAnimating()
             }
@@ -132,28 +132,10 @@ open class WMAlertController: UIViewController, StackedViewDelegate {
         scrollView.addSubview(contentStack)
         scrollView.constrainSubviewToSize(contentStack)
         
-        alertView.addConstraint(NSLayoutConstraint(
-            item: scrollView,
-            attribute: .width,
-            relatedBy: .equal,
-            toItem: contentStack,
-            attribute: .width,
-            multiplier: 1,
-            constant: 0
-            )
-        )
-        
-        let scrollViewHeightConstraint = NSLayoutConstraint(
-            item: scrollView,
-            attribute: .height,
-            relatedBy: .equal,
-            toItem: contentStack,
-            attribute: .height,
-            multiplier: 1,
-            constant: 0
-        )
-        self.scrollViewHeightConstraint = scrollViewHeightConstraint
-        scrollView.addConstraint(scrollViewHeightConstraint)
+        NSLayoutConstraint.activate([
+            scrollView.widthAnchor.constraint(equalTo: contentStack.widthAnchor),
+            scrollView.heightAnchor.constraint(equalTo: contentStack.heightAnchor)
+        ])
         
         switch decoration {
         case .none:
@@ -188,14 +170,14 @@ open class WMAlertController: UIViewController, StackedViewDelegate {
         view.addConstraints(
             NSLayoutConstraint.constraints(
                 withVisualFormat: "H:|-margin-[alertView]-margin-|",
-                options: NSLayoutFormatOptions(rawValue: 0),
+                options: NSLayoutConstraint.FormatOptions(rawValue: 0),
                 metrics: ["margin": alertViewMargin],
-                views: ["alertView": alertView]
+                views: ["alertView": alertView!]
             )
         )
         
         let centerConstraint = NSLayoutConstraint(
-            item: alertView,
+            item: alertView!,
             attribute: .centerY,
             relatedBy: .equal,
             toItem: view,
@@ -220,9 +202,9 @@ open class WMAlertController: UIViewController, StackedViewDelegate {
             withVisualFormat: "V:[scrollView]-0-[buttonStackSeparator]-0-[buttonStack]-0-|",
             options: [.alignAllLeft, .alignAllRight],
             metrics: nil, views: [
-                "scrollView": scrollView,
-                "buttonStackSeparator": buttonStackSeparator,
-                "buttonStack": buttonStack
+                "scrollView": scrollView!,
+                "buttonStackSeparator": buttonStackSeparator!,
+                "buttonStack": buttonStack!
             ]))
     }
     
@@ -367,9 +349,9 @@ open class WMAlertController: UIViewController, StackedViewDelegate {
             
             let marginConstraints = NSLayoutConstraint.constraints(
                 withVisualFormat: "V:|-margin-[alertView]-margin-|",
-                options: NSLayoutFormatOptions(rawValue: 0),
+                options: NSLayoutConstraint.FormatOptions(rawValue: 0),
                 metrics: ["margin": alertViewMargin],
-                views: ["alertView": alertView]
+                views: ["alertView": alertView!]
             )
             alertVerticalMarginConstraints = marginConstraints
             view.addConstraints(marginConstraints)
@@ -417,8 +399,8 @@ open class WMAlertController: UIViewController, StackedViewDelegate {
     
     fileprivate func createButton(forAction action: WMAlertAction) -> UIButton {
         let button = UIButton()
-        button.setTitleColor(UIColor.oceanBlue(), for: UIControlState())
-        button.setTitle(action.title, for: UIControlState())
+        button.setTitleColor(UIColor.oceanBlue(), for: UIControl.State())
+        button.setTitle(action.title, for: UIControl.State())
         button.titleLabel?.font = UIFont.semiboldSystemFontOfSize(14)
         button.addTarget(action, action: #selector(WMAlertAction.performAction), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -455,13 +437,13 @@ open class WMAlertController: UIViewController, StackedViewDelegate {
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(keyboardWillShow(_:)),
-            name: NSNotification.Name.UIKeyboardWillShow,
+            name: UIResponder.keyboardWillShowNotification,
             object: nil
         )
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(keyboardWillHide(_:)),
-            name:NSNotification.Name.UIKeyboardWillHide,
+            name: UIResponder.keyboardWillHideNotification,
             object: nil
         )
     }
@@ -469,7 +451,7 @@ open class WMAlertController: UIViewController, StackedViewDelegate {
     var maximumScrollViewHeightConstraint: NSLayoutConstraint?
     
     @objc func keyboardWillShow(_ notification: Foundation.Notification) {
-        if let info = notification.userInfo, let keyboardFrame = (info[UIKeyboardFrameEndUserInfoKey] as AnyObject).cgRectValue {
+        if let info = notification.userInfo, let keyboardFrame = (info[UIResponder.keyboardFrameEndUserInfoKey] as AnyObject).cgRectValue {
             keyboardHeight = keyboardFrame.height
         }
         let maxHeight = view.bounds.height - keyboardHeight

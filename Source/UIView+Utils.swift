@@ -89,7 +89,7 @@ extension UIView {
         return constraint
     }
     
-    func removeConstraints(forAttribute attribute: NSLayoutAttribute) -> [NSLayoutConstraint] {
+    func removeConstraints(forAttribute attribute: NSLayoutConstraint.Attribute) -> [NSLayoutConstraint] {
         var deactivatedConstraints = [NSLayoutConstraint]()
         for constraint in constraints {
             if constraint.firstAttribute == attribute {
@@ -132,7 +132,7 @@ extension UIView {
         self.addConstraints(
             NSLayoutConstraint.constraints(
                 withVisualFormat: "H:|-left-[subview]-right-|",
-                options: NSLayoutFormatOptions(rawValue: 0),
+                options: NSLayoutConstraint.FormatOptions(rawValue: 0),
                 metrics: ["left": insets.left, "right": insets.right],
                 views: ["subview": subview]
             )
@@ -140,7 +140,7 @@ extension UIView {
         self.addConstraints(
             NSLayoutConstraint.constraints(
                 withVisualFormat: "V:|-top-[subview]-bottom-|",
-                options: NSLayoutFormatOptions(rawValue: 0),
+                options: NSLayoutConstraint.FormatOptions(rawValue: 0),
                 metrics: ["top": insets.top, "bottom": insets.bottom],
                 views: ["subview": subview]
             )

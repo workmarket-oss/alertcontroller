@@ -74,7 +74,7 @@ public class StackedView: UIView {
         guard let previousView = lastView else {
             let vConstraints = NSLayoutConstraint.constraints(
                 withVisualFormat: "\(vAxis):|-top-[addedView]",
-                options: NSLayoutFormatOptions(rawValue: 0),
+                options: NSLayoutConstraint.FormatOptions(rawValue: 0),
                 metrics: ["top": direction == .vertical ? insets.top : insets.left],
                 views: ["addedView": view]
             )
@@ -82,7 +82,7 @@ public class StackedView: UIView {
             
             let hConstraints = NSLayoutConstraint.constraints(
                 withVisualFormat: "\(hAxis):|-left-[addedView]-right-|",
-                options: NSLayoutFormatOptions(rawValue: 0),
+                options: NSLayoutConstraint.FormatOptions(rawValue: 0),
                 metrics: [
                     "left": direction == .vertical ? insets.left : insets.top,
                     "right": direction == .vertical ? insets.right : insets.bottom
@@ -99,7 +99,7 @@ public class StackedView: UIView {
         
         let constraints = NSLayoutConstraint.constraints(
             withVisualFormat: "\(vAxis):[previousView]-between-[addedView]",
-            options: NSLayoutFormatOptions(rawValue: 0),
+            options: NSLayoutConstraint.FormatOptions(rawValue: 0),
             metrics: ["between": direction == .vertical ? insets.top + previousInsets.bottom : insets.left + previousInsets.right],
             views: ["previousView": previousView,
                     "addedView": view]
@@ -109,7 +109,7 @@ public class StackedView: UIView {
         
         let hConstraints = NSLayoutConstraint.constraints(
             withVisualFormat: "\(hAxis):|-left-[addedView]-right-|",
-            options: NSLayoutFormatOptions(rawValue: 0),
+            options: NSLayoutConstraint.FormatOptions(rawValue: 0),
             metrics: [
                 "left": direction == .vertical ? insets.left : insets.top,
                 "right": direction == .vertical ? insets.right : insets.bottom
@@ -143,7 +143,7 @@ public class StackedView: UIView {
         guard let previousView = previous else {
             let vConstraints = NSLayoutConstraint.constraints(
                 withVisualFormat: "\(vAxis):|-top-[addedView]",
-                options: NSLayoutFormatOptions(rawValue: 0),
+                options: NSLayoutConstraint.FormatOptions(rawValue: 0),
                 metrics: ["top": direction == .vertical ? insets.top : insets.left],
                 views: ["addedView": view]
             )
@@ -151,7 +151,7 @@ public class StackedView: UIView {
             
             let hConstraints = NSLayoutConstraint.constraints(
                 withVisualFormat: "\(hAxis):|-left-[addedView]-right-|",
-                options: NSLayoutFormatOptions(rawValue: 0),
+                options: NSLayoutConstraint.FormatOptions(rawValue: 0),
                 metrics: [
                     "left": direction == .vertical ? insets.left : insets.top,
                     "right": direction == .vertical ? insets.right : insets.bottom
@@ -168,7 +168,7 @@ public class StackedView: UIView {
         
         let constraints = NSLayoutConstraint.constraints(
             withVisualFormat: "\(vAxis):[previousView]-between-[addedView]",
-            options: NSLayoutFormatOptions(rawValue: 0),
+            options: NSLayoutConstraint.FormatOptions(rawValue: 0),
             metrics: ["between": direction == .vertical ? insets.top + previousInsets.bottom : insets.left + previousInsets.right],
             views: ["previousView": previousView,
                     "addedView": view]
@@ -178,7 +178,7 @@ public class StackedView: UIView {
         
         let hConstraints = NSLayoutConstraint.constraints(
             withVisualFormat: "\(hAxis):|-left-[addedView]-right-|",
-            options: NSLayoutFormatOptions(rawValue: 0),
+            options: NSLayoutConstraint.FormatOptions(rawValue: 0),
             metrics: [
                 "left": direction == .vertical ? insets.left : insets.top,
                 "right": direction == .vertical ? insets.right : insets.bottom
@@ -214,7 +214,7 @@ public class StackedView: UIView {
     }
     
     private func setupBottomConstraint(forView view: UIView, insets: UIEdgeInsets) {
-        guard let index = self.subviews.index(of: view) else {
+        guard let index = self.subviews.firstIndex(of: view) else {
             return
         }
         
@@ -281,7 +281,7 @@ public class StackedView: UIView {
     public func removeSubview(_ view: UIView,
                               animated: Bool = false,
                               completion: (() -> Void)? = nil) {
-        guard let index = self.subviews.index(of: view), index >= 0 else {
+        guard let index = self.subviews.firstIndex(of: view), index >= 0 else {
             return
         }
         // The view to be removed is the first subview amongst many subviews
@@ -291,7 +291,7 @@ public class StackedView: UIView {
             
             let vConstraints = NSLayoutConstraint.constraints(
                 withVisualFormat: "\(vAxis):|-top-[nextView]",
-                options: NSLayoutFormatOptions(rawValue: 0),
+                options: NSLayoutConstraint.FormatOptions(rawValue: 0),
                 metrics: ["top": direction == .vertical ? insets.top : insets.left],
                 views: ["nextView": nextView]
             )
@@ -309,7 +309,7 @@ public class StackedView: UIView {
                 let insets = delegate?.stackedView(self, spacingForView: nextView) ?? UIEdgeInsets.zero
                 let constraints = NSLayoutConstraint.constraints(
                     withVisualFormat: "\(vAxis):[previousView]-between-[nextView]",
-                    options: NSLayoutFormatOptions(rawValue: 0),
+                    options: NSLayoutConstraint.FormatOptions(rawValue: 0),
                     metrics: ["between": direction == .vertical ? insets.top + previousInsets.bottom : insets.left + previousInsets.right],
                     views: ["previousView": previousView,
                             "nextView": nextView]
