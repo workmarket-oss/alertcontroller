@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'WMAlertController'
-  s.version          = '0.3.0'
+  s.version          = '0.4.0'
   s.summary          = 'A customizable alert controller, designed to behave like UIAlertController.'
   s.homepage         = 'https://github.com/workmarket-oss/alertcontroller'
   s.license          = { :type => 'ASLv2', :file => 'LICENSE' }
